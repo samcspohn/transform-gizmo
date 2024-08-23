@@ -549,7 +549,7 @@ impl GizmoConfig {
 
         self.scale_factor =
             self.mvp.as_ref()[15] / self.projection_matrix.as_ref()[0] / self.viewport.width()
-                * 2.0;
+                * 2.0 * -1.0;
 
         self.focus_distance = self.scale_factor * (self.visuals.stroke_width / 2.0 + 5.0);
 

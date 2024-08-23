@@ -200,7 +200,7 @@ fn rotation_angle(subgizmo: &SubGizmo, ui: &Ui) -> Option<f32> {
         return None;
     }
 
-    let mut angle = f32::atan2(delta.y, delta.x);
+    let mut angle = -f32::atan2(delta.y, delta.x);
     if subgizmo.config.view_forward().dot(subgizmo.normal()) < 0.0 {
         angle *= -1.0;
     }
